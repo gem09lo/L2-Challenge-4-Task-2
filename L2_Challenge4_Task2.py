@@ -20,17 +20,14 @@ def say_hello_to_pets(pets):
             elif pet["type"] == "cat":
                 hello_message = "Meow"
                 pet_name = pet["name"]
+            else:
+                raise Exception("Sorry, only cats and dogs")
         print(f"{hello_message}, {pet_name}!")
-    if pet["type"] != "dog" and pet["type"] != "cat":
-        raise Exception("Sorry, only cats and dogs")
-#if __name__ == "__main__":
-    #say_hello_to_pets(pets)
 
 say_hello_to_pets(pets)
 
 
 
-#expected output = e.g. "Woof, Fluffy!"
 
 # Errors: L4 change list name "animals" --> "pets"; L14 is it needed? ;; removed ":"
 # L17 and L20[pet.name --> pet[name]; L14 ";" to ":"; L18 "if" --> "elif";
